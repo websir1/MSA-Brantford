@@ -4,10 +4,10 @@ body, html {
     color: #000;
 }
 
-//.logo {
-    //text-align: center;
-   // margin: 200px;
-//}
+.logo {
+    text-align: center;
+    margin: 200px;
+}
 
 #event-logo {
     display: block;
