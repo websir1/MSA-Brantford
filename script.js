@@ -7,6 +7,7 @@ const glassSound = document.getElementById('glassSound');
 
     // Play the glass sound
     glassSound.play();
+
     if (registeredNames.includes(nameInput)) {
         resultDiv.innerHTML = '<span style="color: green;">Registered ✅</span>';
     } else {
