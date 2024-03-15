@@ -32,7 +32,7 @@
 { name: "Musawwir Ahmed", number: "169073154", days: ["Monday", "Wednesday", "Thursday"], dietary: "Halal", registeredToday: false },
 { name: "Shahrez Ahmed.", number: "212096010", days: ["Monday", "Wednesday", "Thursday"], dietary: "None", registeredToday: false },
 { name: "Muhammad Abdullah Ejaz", number: "169077281", days: ["Monday", "Wednesday", "Thursday"], dietary: "None", registeredToday: false }
-];
+ ];
 students.push(
   { name: "Mustafa Khalil", number: "W2064963", days: ["Monday", "Wednesday", "Thursday","Friday"], dietary: "No", registeredToday: false },
 { name: "haider", number: "169062442", days: ["Monday", "Wednesday"], dietary: "N/A", registeredToday: false },
