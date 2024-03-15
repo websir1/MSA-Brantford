@@ -6,6 +6,7 @@ body, html {
 
 .logo {
     text-align: center;
+    background: url('logo.png');
     margin: 20px;
 }
 
