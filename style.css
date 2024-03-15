@@ -56,3 +56,78 @@ button {
 .registered {
     background-color: lightgreen;
 }
+#tableWrapper {
+    margin: 50px auto;
+    width: 80%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #8665f7;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+a {
+    text-decoration: none;
+    color: #555;
+}
+
+@media only screen and (max-width: 600px) {
+    th, td {
+        font-size: 11px;
+    }
+}
+#registrationControl {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#studentNumberInput {
+    padding: 10px;
+    margin-right: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#checkRegistrationButton {
+    padding: 10px 20px;
+    background-color: #8665f7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#checkRegistrationButton:hover {
+    background-color: #7454c0;
+}
+
+#counts {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#counts p {
+    color: #555;
+    font-size: 16px;
+    margin: 5px 0;
+}
