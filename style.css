@@ -8,6 +8,8 @@ body, html {
     text-align: center;
     margin: 20px;
     background: url('logo.png');
+    width: 100px;
+    height: 100px;
 }
 
 #app {
