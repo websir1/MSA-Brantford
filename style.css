@@ -4,12 +4,28 @@ body, html {
     color: #000;
 }
 
-.logo {
+//.logo {
+    //text-align: center;
+   // margin: 200px;
+//}
+
+#event-logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 100px; /* Adjust based on your logo's size */
+}
+
+#content {
     text-align: center;
-    margin: 200px;
-    background: url('logo.png');
-    width: 100px;
-    height: 100px;
+    margin-top: 20px;
+}
+
+#nameInput {
+    margin-right: 10px;
+}
+
+#result {
+    margin-top: 20px;
 }
 
 #app {
