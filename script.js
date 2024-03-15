@@ -7,13 +7,12 @@ const defaultAttendees = [
     { name: "Evan", number: "5", registered: false }
 ];
 
-// Attempt to load data if it's less than 24 hours old
-let storedData = localStorage.getItem('registeredData');
 let registeredAttendees = defaultAttendees;
+const storedData = localStorage.getItem('registeredData');
 if (storedData) {
-    storedData = JSON.parse(storedData);
-    if (new Date().getTime() - storedData.timestamp < 86400000) {
-        registeredAttendees = storedData.attendees;
+    const dataObject = JSON.parse(storedData);
+    if (new Date().getTime() - dataObject.timestamp < 86400000) { // 24 hours check
+        registeredAttendees = dataObject.attendees;
     }
 }
 
@@ -83,4 +82,11 @@ function checkRegistration() {
 
 window.onload = function() {
     populateTable();
+    // Add event listener for 'Enter' key in the input field
+    document.getElementById('nameInput').addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // Prevent the default form submission
+            checkRegistration();
+        }
+    });
 };
