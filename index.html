@@ -6,13 +6,50 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <img src="logo.png" alt="Event Logo" id="event-logo">
+<img src="logo.png" alt="Event Logo" id="event-logo">
 <audio id="glassSound" src="glass_sound.MP3"></audio>
     <div id="app">
         <input type="text" id="nameInput" placeholder="Enter Name Here">
         <button onclick="checkRegistration()">Check Registration</button>
         <div id="result"></div>
     </div>
+<div id="counts">
+    <p id="registeredCount">Registered: 0</p>
+    <p id="remainingCount">Remaining: 0</p>
+</div>
+
+<table id="studentsTable">
+    <thead>
+        <tr>
+            <th>Student Number</th>
+            <th>Student Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Student rows will be dynamically inserted here -->
+<tr>
+        <td>1</td>
+        <td>Alice</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Bob</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Charlie</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Diana</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>Evan</td>
+    </tr>
+    </tbody>
+</table>
+
     <script src="script.js"></script>
 </body>
 </html>
