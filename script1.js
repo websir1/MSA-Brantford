@@ -5,7 +5,7 @@ const form = document.querySelector("form"),
       pInput = pField.querySelector("input");
 
 // Your hardcoded credentials
-const correctEmail = "msa@gmail.com.com"; // Replace with your custom email
+const correctEmail = "msa@gmail.com"; // Replace with your custom email
 const correctPassword = "msabrantford"; // Replace with your custom password
 
 form.onsubmit = (e) => {
