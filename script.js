@@ -225,3 +225,8 @@ function updateCounts() {
     document.getElementById('registeredCount').textContent = `Registered: ${registeredTodayCount}`;
     document.getElementById('remainingCount').textContent = `Remaining: ${students.length - registeredTodayCount}`;
 }
+function logout() {
+    // Perform logout actions here, such as redirecting to a login page or clearing session data
+    window.location.href = 'index.html'; // Example: redirect to login
+}
+
