@@ -222,7 +222,7 @@ function updateCounts() {
     const today = new Date().toLocaleDateString('en-us', { weekday: 'long' });
 
     // Define maximum capacities for each day
-    const maxCapacityMonday = 35; // Adjusted capacity for Monday
+    const maxCapacityMonday = 34; // Adjusted capacity for Monday
     const maxCapacityWednesday = 39; // Capacity for Wednesday
     const maxCapacityThursday = 36; // Capacity for Thursday
 
