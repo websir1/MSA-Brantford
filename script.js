@@ -180,7 +180,6 @@ function addStudentRow(student, tableBody) {
         row.style.backgroundColor = 'lightgreen'; // Highlight if registered today
     }
 }
-
 function checkRegistration() {
     const studentNumberInput = document.getElementById('studentNumberInput').value.trim();
     const resultDiv = document.getElementById('result');
@@ -221,9 +220,39 @@ function loadDataFromLocalStorage() {
 }
 
 function updateCounts() {
-    const registeredTodayCount = students.filter(student => student.registeredToday).length;
-    document.getElementById('registeredCount').textContent = `Registered: ${registeredTodayCount}`;
-    document.getElementById('remainingCount').textContent = `Remaining: ${students.length - registeredTodayCount}`;
+    const today = new Date().toLocaleDateString('en-us', { weekday: 'long' });
+
+    // Define maximum capacities for each day
+    const maxCapacityMonday = 36; // Adjusted capacity for Monday
+    const maxCapacityWednesday = 41; // Capacity for Wednesday
+    const maxCapacityThursday = 37; // Capacity for Thursday
+
+    // Count how many students have registered today
+    let totalRegisteredToday = students.filter(student => student.registeredToday).length;
+
+    // Dynamically determine the 'remaining' count for today based on the day
+    let maxCapacityToday;
+    switch(today.toLowerCase()) {
+        case 'monday':
+            maxCapacityToday = maxCapacityMonday;
+            break;
+        case 'wednesday':
+            maxCapacityToday = maxCapacityWednesday;
+            break;
+        case 'thursday':
+            maxCapacityToday = maxCapacityThursday;
+            break;
+        default:
+            // Adjust this value as needed for days when no registration is taking place
+            maxCapacityToday = null;
+            break;
+    }
+
+    let remainingForToday = maxCapacityToday !== null ? maxCapacityToday - totalRegisteredToday : "N/A";
+
+    // Update UI to show only total registered today and the remaining slots for today
+    document.getElementById('registeredCount').textContent = `Registered Today: ${totalRegisteredToday}`;
+    document.getElementById('remainingCount').textContent = `Remaining Today: ${remainingForToday}`;
 }
 function logout() {
     // Perform logout actions here, such as redirecting to a login page or clearing session data
