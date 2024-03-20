@@ -40,7 +40,6 @@ students.push(
 { name: "Rehan Moolla", number: "200754810", days: ["Monday", "Wednesday", "Thursday"], dietary: "none", registeredToday: false },
 { name: "Fatimah Patel", number: "169043589", days: ["Monday", "Wednesday", "Thursday"], dietary: "None", registeredToday: false },
 { name: "Fadhil Shifaa", number: "169077453", days: ["Wednesday", "Thursday"], dietary: "Anything will do but Preferably Low fat, high protein", registeredToday: false },
-{ name: "Don't know", number: "169054510", days: ["Monday", "Wednesday", "Thursday"], dietary: "Halal", registeredToday: false },
 { name: "Hannan Khan", number: "169054510", days: ["Wednesday"], dietary: "Halal", registeredToday: false },
 { name: "Abdulhakim Farah", number: "169073089", days: ["Monday", "Wednesday", "Thursday"], dietary: "Just halal ofc", registeredToday: false },
 { name: "Zeckria Farah", number: "210747030", days: ["Monday", "Wednesday", "Thursday"], dietary: "Nothing", registeredToday: false },);
@@ -223,9 +222,9 @@ function updateCounts() {
     const today = new Date().toLocaleDateString('en-us', { weekday: 'long' });
 
     // Define maximum capacities for each day
-    const maxCapacityMonday = 36; // Adjusted capacity for Monday
-    const maxCapacityWednesday = 41; // Capacity for Wednesday
-    const maxCapacityThursday = 37; // Capacity for Thursday
+    const maxCapacityMonday = 35; // Adjusted capacity for Monday
+    const maxCapacityWednesday = 40; // Capacity for Wednesday
+    const maxCapacityThursday = 36; // Capacity for Thursday
 
     // Count how many students have registered today
     let totalRegisteredToday = students.filter(student => student.registeredToday).length;
