@@ -223,7 +223,7 @@ function updateCounts() {
 
     // Define maximum capacities for each day
     const maxCapacityMonday = 35; // Adjusted capacity for Monday
-    const maxCapacityWednesday = 40; // Capacity for Wednesday
+    const maxCapacityWednesday = 39; // Capacity for Wednesday
     const maxCapacityThursday = 36; // Capacity for Thursday
 
     // Count how many students have registered today
